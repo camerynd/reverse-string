@@ -1,5 +1,12 @@
 def reverse_string(str)
-  # type your code in here
+  new_array = []
+  str_array = str.split('')
+  $i = str_array.length
+  while $i >= 0 do
+    new_array << str_array[$i]
+    $i -= 1
+  end
+  new_array.join('')
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -11,7 +18,10 @@ if __FILE__ == $PROGRAM_NAME
   puts "Expecting: 'ybabtac'"
   puts "=>", reverse_string('catbaby')
 
-  # Don't forget to add your own!
+  # it "can reverse multiple words" do
+  #   expect(reverse_string('bla bla bla')).to eq('alb alb alb')
+  # end
+
 end
 
 # Please add your pseudocode to this file
